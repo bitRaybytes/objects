@@ -1,0 +1,150 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 100dvh; */
+    height: 100dvh;
+    background-color: var(--clr-bg);
+    
+}
+
+/* --clr-btn and --clr-btn-shadow needs to be extracted with the code */
+:root{
+    --clr-bg: rgb(221, 221, 221);
+
+    --clr-btn: #F2A516;
+    --clr-btn-shadow: 0 2px 40px #F2A516;
+   
+}
+.darkmode{
+    --clr-bg: rgb(13, 13, 13);
+    --clr-btn: #a6a6a6;
+    --clr-btn-shadow: 0 2px 40px rgb(255, 255, 255);
+}
+
+/* button styling */
+/* change if necessary! */
+button{
+    /* btn roots */
+    --padding: 14px;
+    --svg-w-h: 100px;
+    --width: 200px;
+    --border-radius: 100px;
+    --clr-btn-hover: rgba(230, 189, 59, 0.463);
+    /* sun */
+    --svg-light-bg: #D93D04;
+    --svg-fill-light: #F2A516;
+    /* moon */
+    --svg-dark-bg: rgb(89, 88, 89);
+    --svg-fill-dark: rgb(166, 166, 166);
+    /* --svg-fill-dark: #f0f0f2; */
+    
+
+    
+    background-color: var(--clr-btn);
+    box-shadow: var(--clr-btn-shadow);
+    width: var(--width);
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+
+    .svg-btn{
+        height: var(--svg-w-h);
+        width: var(--svg-w-h);
+    }
+    .svgs{
+        width: 100%;
+        height: 100%;
+        display: flex; 
+    }
+    svg:nth-child(1){
+        border-radius: 50%;
+        fill: var(--svg-fill-dark);
+        background-color: var(--svg-dark-bg);
+        transform: translateX(70%);
+    }   
+    svg:nth-child(2){
+        border-radius: 50%;
+        background-color: var(--svg-light-bg);
+        fill: var(--svg-fill-light);
+    }
+}
+
+    
+/* switch the svg by clicking on btn with js */
+/* set first child on block */
+.darkmode #theme-switch{
+    /* animation: slide .3s ease-in-out 0 none forwards both; */
+}
+.darkmode #theme-switch .svgs svg:first-child{
+    display: block;
+}
+/* set second child on none*/
+.darkmode #theme-switch .svgs svg:last-child{ 
+    display: none;
+    position: absolute;
+    right: 15px;
+}
+
+#theme-switch .svgs svg:first-child{
+    display: none;
+}
+
+/* moon - child 1 */
+button svg:nth-child(1){
+    animation-name: slide_forwards;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-direction: linear;
+    animation-fill-mode:forwards;
+}
+/* sun - child 2 */
+button svg:nth-child(2){
+    animation-name: slide_backwards;
+    animation-timing-function: ease;
+    animation-duration: .5s;
+    animation-direction: linear;
+    animation-fill-mode:backwards;
+}
+
+
+/* Keyframes moon */
+@keyframes slide_forwards {
+    0% { 
+        transform: translateX(0%);
+        opacity: 0;
+    }
+    100% { 
+        
+        transform: translateX(70%);
+        opacity: 1;
+    }
+}
+
+/* Keyframes sun */
+@keyframes slide_backwards {
+    100% { 
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    0% { 
+        transform: translateX(70%);
+        opacity: 0;
+
+    }
+}
+/* Keyframe for rotate is not settled in code above */
+@keyframes rotate{
+    from{
+        
+        transform: rotate(360deg)
+    }
+    to{
+        transform: rotate(0);
+    }
+}

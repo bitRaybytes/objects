@@ -1,0 +1,130 @@
+/* CSS Reset before styling */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    overflow-wrap: break-word;
+  }
+  #root,
+  #__next {
+    isolation: isolate;
+  }
+/* CSS Reset END */
+body{
+    height: 100dvh;
+    width: 100dvw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.carousel_wrapper{
+    background-color: gray;
+    border-radius: 15px;
+
+    .carousel_container{
+        display: flex;
+        border-radius: 15px;
+
+        .carousel_item{
+            width: 200px;
+            height: 600px;
+            position: relative;
+            transition: .4s ease-in-out;
+            border-radius: 15px;
+
+            
+            h3{
+                display: none;
+                font-size: 2rem;
+                position: absolute;
+                top: 400px;
+                left: 70px;
+                width: 100%;
+                background-color: rgb(0, 132, 193);
+                
+            }
+            p{
+                position: absolute;
+                top: 500px;
+                left: 100px;
+
+            }
+            
+            .carousel_img{
+
+                display: flexbox;
+                flex: content;
+                
+                img{
+                    background-repeat: no-repeat;
+                    
+                    height: 600px;
+                  }
+                }
+                
+                  &:hover{
+                    h3{
+                      background-color: red;
+                      padding: 5px;
+                      width: 100%;
+                      display: block;
+                      position: absolute;
+
+                    }
+                  }
+                }
+              }
+              
+    .carousel_item:nth-child(1):hover{
+        animation: slideup .3s ease-in-out normal forwards linear;
+        
+        background-color: rgb(0, 0, 0, .1);
+        opacity: 0.5;
+        /* z-index: 4; */
+        cursor: pointer;
+        
+        img{
+            width: 300px;
+        }
+    }
+
+    @keyframes slideup{
+        from{
+            opacity: 0;
+        }
+        to{
+            
+            opacity: 1;
+        }
+    }
+    
+}
