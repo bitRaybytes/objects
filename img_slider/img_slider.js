@@ -118,13 +118,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Erklärung der Erweiterung:
-// Slides-Array: Jedes Objekt im slides-Array enthält:
-// image: Der Bildpfad.
-// title: Der Titeltext (h2).
-// subtitle: Der Untertitel (h3).
-// paragraph: Die Beschreibung (p).
-// Textelemente aktualisieren: In der Funktion updateSlide() werden die Inhalte der Textelemente (h2, h3, p) dynamisch basierend auf dem aktuellen Slide aktualisiert.
-// Event Listener: Die Navigation funktioniert wie zuvor, aktualisiert jedoch nun sowohl das Bild als auch die Texte.
-// Integration:
-// Binde den JavaScript-Code wie zuvor beschrieben ein. Teste nun die Slideshow, und du wirst sehen, dass die Texte passend zum angezeigten Bild aktualisiert werden! 😊
-
+// Erklärung der Button-Integration:
+// buttonText und buttonLink: Im slides-Array wird jedem Slide ein Text und ein Link für den Button zugeordnet.
+// Update-Logik:
+// Der Text des Buttons (buttonElement.textContent) wird basierend auf dem aktuellen Slide aktualisiert.
+// Der Link des Buttons (buttonElement.href) wird ebenfalls angepasst. Falls kein Link angegeben ist, wird ein Standard-"#"-Link verwendet.
+// HTML-Änderung: Der Button wird zu einem <a>-Element geändert, damit echte Links unterstützt werden.
+// Verhalten:
+// Beim Wechseln der Slides ändern sich Bild, Text und Button dynamisch.
+// Der Button führt zu unterschiedlichen Aktionen oder Seiten, je nach aktuellem Slide.
