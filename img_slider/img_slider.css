@@ -1,0 +1,152 @@
+/* CSS Reset before styling */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+/* CSS Reset END */
+
+.items_container{
+  height: calc(100dvh - 100px);
+  /* height: 100dvh; */
+  background-color: rgba(242, 6, 6, 0.231);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .grid_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "image text";
+
+    .left_container{
+      grid-area: image;
+      position: absolute;
+      top: 50%;
+      left: 1%;
+      background-color: rgba(0, 0, 0, 0.315);
+      border-radius: 50px;
+      width: 2rem;
+      height: 2rem;
+      fill: black;
+
+      .leftarrw{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    .left_container:hover{
+      cursor: pointer;
+      box-shadow: rgb(0, 0, 0) 0 0 3px;
+    }
+    .right_container{
+      grid-area: text;
+      position: absolute;
+      top: 50%;
+      right: 1%;
+      background-color: rgba(0, 0, 0, 0.315);
+      border-radius: 50px;
+      width: 2rem;
+      height: 2rem;
+      fill: black;
+
+      .rightarrw{
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+    .right_container:hover{
+      cursor: pointer;
+      box-shadow: rgb(0, 0, 0) 0 0 3px;
+    }
+
+    .item_wrapper{
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      
+      .img_wrapper{
+        
+      }
+    }
+
+    .text_wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .txt_item{
+        position: absolute;
+        padding: 0 25px;
+        /* .blur{
+          height: 100%;
+          width: 100%;
+        } */
+
+        .h2{
+          width: 550px;
+          font-size: 2.5rem;
+        }
+        .h3{
+          width: 550px;
+          font-size: 1.5rem;
+        }
+        .info-paragraph{
+          width: 550px;
+        }
+        .btn_wrapper{
+
+          .btn{
+            width: 350px;
+            height: 35px;
+            border-radius: 8px;
+            border: none;
+            box-shadow: black 1px 3px;
+            cursor: pointer;
+            transition: 500ms ease-in-out;
+
+          }
+        }
+        .btn:hover{
+          width: 550px;
+        }
+      
+      }
+    }
+  }
+}
