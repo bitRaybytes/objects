@@ -41,12 +41,13 @@ h6 {
 /* CSS Reset END */
 
 .items_container{
-  height: calc(100dvh - 100px);
-  /* height: 100dvh; */
+  /* height: calc(100dvh - 100px); */
+  height: 100dvh;
   background-color: rgba(242, 6, 6, 0.231);
   display: flex;
   justify-content: center;
   align-items: center;
+
   .grid_container{
     display: grid;
     grid-template-columns: 1fr 1fr;

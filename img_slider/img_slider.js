@@ -47,9 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
 //______________________
 
 
-// Um jedem Bild individuelle Textelemente zuzuordnen, erweitern wir den JavaScript-Code. Dazu erstellen wir ein Array, das die Bilder und ihre zugehörigen Texte enthält. Die Texte werden dynamisch aktualisiert, wenn das Bild geändert wird.
+// Um jedem Bild individuelle Textelemente zuzuordnen, erweitern wir den JavaScript-Code. 
+// Dazu erstellen wir ein Array, das die Bilder und ihre zugehörigen Texte enthält. Die Texte werden dynamisch aktualisiert, wenn das Bild geändert wird.
 
-// JavaScript für die Bilder-Slideshow mit Text
+
 // JavaScript für die Bilder-Slideshow mit Text und Button
 document.addEventListener("DOMContentLoaded", () => {
     const slides = [
